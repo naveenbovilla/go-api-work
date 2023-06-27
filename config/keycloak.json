@@ -1,0 +1,6 @@
+{
+  "client_id": "test",
+  "client_secret": "x8xhx7xkrVXF6WW9sMiwVCYqu9Nnh2HA",
+  "realm": "test",
+  "auth_server": "http://idp.localhost"
+}
