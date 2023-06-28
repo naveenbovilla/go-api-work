@@ -2,6 +2,7 @@ package db
 
 import (
 	"fmt"
+	model "gitlab.com/kleene/extra-hours/internal/models"
 	"os"
 
 	"github.com/gin-gonic/gin"
@@ -23,6 +24,7 @@ func (d Postgres) Open() (*Postgres, error) {
 	if err != nil {
 		return nil, fmt.Errorf("Connection error: %w", err)
 	}
+	model.Migrate(d.Con)
 	return &d, nil
 }
 
